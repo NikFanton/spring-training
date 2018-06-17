@@ -1,7 +1,7 @@
-package com.epam.logger.impl;
+package com.company.logger.impl;
 
-import com.epam.Event;
-import com.epam.logger.EventLogger;
+import com.company.Event;
+import com.company.logger.EventLogger;
 
 public class ConsoleEventLogger implements EventLogger {
     @Override

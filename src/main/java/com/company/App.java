@@ -1,6 +1,6 @@
-package com.epam;
+package com.company;
 
-import com.epam.logger.EventLogger;
+import com.company.logger.EventLogger;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

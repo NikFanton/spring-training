@@ -1,6 +1,6 @@
-package com.epam.logger;
+package com.company.logger;
 
-import com.epam.Event;
+import com.company.Event;
 
 public interface EventLogger {
     void logEvent(Event event);
