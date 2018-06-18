@@ -5,11 +5,11 @@ import com.company.logger.EventLogger;
 
 import java.util.List;
 
-public class CombinedEventLogger implements EventLogger {
+public class CombineEventLogger implements EventLogger {
 
     private List<EventLogger> loggers;
 
-    public CombinedEventLogger(List<EventLogger> loggers) {
+    public CombineEventLogger(List<EventLogger> loggers) {
         this.loggers = loggers;
     }
 

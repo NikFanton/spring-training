@@ -1,4 +1,4 @@
-package com.company;
+package com.company.entity;
 
 public class Client {
     private String id;

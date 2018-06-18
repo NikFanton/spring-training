@@ -1,13 +1,17 @@
-package com.company;
+package com.company.entity;
 
 import java.text.DateFormat;
+import java.time.LocalTime;
 import java.util.Date;
 
 public class Event {
+    private static final LocalTime startOfEvening = LocalTime.of(17, 0);
+
     private int id;
     private String msg;
     private Date date;
     private DateFormat dateFormat;
+    private EventType eventType;
 
     public Event(Date date, DateFormat dateFormat) {
         this.date = date;
@@ -32,6 +36,10 @@ public class Event {
 
     public DateFormat getDateFormat() {
         return dateFormat;
+    }
+
+    public static boolean isDay() {
+        return LocalTime.now().compareTo(startOfEvening) < 0;
     }
 
     @Override

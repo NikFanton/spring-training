@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+ 		http://www.springframework.org/schema/beans/spring-beans-3.2.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <bean id="consoleLogger" class="com.company.logger.impl.ConsoleEventLogger"/>
+
+    <bean id="cacheFileLogger" class="com.company.logger.impl.CacheFileEventLogger" init-method="init" destroy-method="destroy">
+        <constructor-arg index="0" value="log.txt"/>
+        <constructor-arg index="1">
+            <list/>
+        </constructor-arg>
+        <constructor-arg index="2" value="10"/>
+    </bean>
+
+    <bean id="combineLogger" class="com.company.logger.impl.CombineEventLogger">
+        <constructor-arg>
+            <list>
+                <ref bean="consoleLogger"/>
+                <ref bean="cacheFileLogger"/>
+            </list>
+        </constructor-arg>
+    </bean>
+
+    <util:map id="loggers">
+        <entry key="INFO" value-ref="consoleLogger"/>
+        <entry key="ERROR" value-ref="combineLogger"/>
+    </util:map>
+
+</beans>
