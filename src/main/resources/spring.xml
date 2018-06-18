@@ -5,25 +5,7 @@
  		http://www.springframework.org/schema/beans
  		http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
 
-    <bean id="client" class="com.company.Client">
-        <constructor-arg index="0" value="1"/>
-        <constructor-arg index="1" value="John Smith"/>
-    </bean>
-
-    <bean id="eventLogger" class="com.company.logger.impl.ConsoleEventLogger"/>
-
-    <bean id="event" class="com.company.Event" scope="prototype">
-        <constructor-arg>
-            <bean class="java.util.Date"/>
-        </constructor-arg>
-        <constructor-arg>
-            <bean class="java.text.DateFormat" factory-method="getDateTimeInstance"/>
-        </constructor-arg>
-    </bean>
-
-    <bean id="app" class="com.company.App">
-        <constructor-arg ref="client"/>
-        <constructor-arg ref="eventLogger"/>
-    </bean>
+    <import resource="loggers.xml"/>
+    <import resource="others.xml"/>
 
 </beans>
