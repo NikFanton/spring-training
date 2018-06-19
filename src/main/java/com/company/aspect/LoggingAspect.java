@@ -1,30 +1,22 @@
-package com.company;
+package com.company.aspect;
 
 import org.aspectj.lang.JoinPoint;
-import org.aspectj.lang.annotation.*;
-import org.springframework.stereotype.Component;
 
 
-@Component
-@Aspect
 public class LoggingAspect {
-    @Pointcut("execution(* *.logEvent(..))")
+
     private void allLogEventMethods() {
+        System.out.println("execution");
     }
 
-    @Before("allLogEventMethods()")
     public void logBefore(JoinPoint joinPoint) {
+        System.out.println("before");
     }
 
-    @AfterReturning(
-            pointcut = "allLogEventMethods()",
-            returning = "retVal")
-    public void logAfter(Object retVal) {
+    public void logAfter() {
+        System.out.println("after");
     }
 
-    @AfterThrowing(
-            pointcut = "allLogEventMethods()",
-            throwing = "ex")
     public void LogAfterThrow(Throwable ex) {
 
     }

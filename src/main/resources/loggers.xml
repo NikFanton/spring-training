@@ -4,6 +4,8 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
  		http://www.springframework.org/schema/beans/spring-beans-3.2.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
 
+    <bean id="logger" class="com.company.logger.EventLogger" abstract="true"/>
+
     <bean id="consoleLogger" class="com.company.logger.impl.ConsoleEventLogger"/>
 
     <bean id="cacheFileLogger" class="com.company.logger.impl.CacheFileEventLogger" init-method="init" destroy-method="destroy">

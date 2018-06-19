@@ -22,6 +22,8 @@
 
     <properties>
         <spring.ver>5.0.7.RELEASE</spring.ver>
+        <spring.jpa.ver>2.0.8.RELEASE</spring.jpa.ver>
+        <aspectj.ver>1.5.4</aspectj.ver>
     </properties>
 
     <dependencies>
@@ -53,11 +55,32 @@
             <version>${spring.ver}</version>
         </dependency>
 
+        <!-- spring-data-jpa -->
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.data</groupId>-->
+            <!--<artifactId>spring-data-jpa</artifactId>-->
+            <!--<version>${spring.jpa.ver}</version>-->
+        <!--</dependency>-->
+
         <!-- commons-io -->
         <dependency>
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
             <version>2.4</version>
+        </dependency>
+
+        <!-- aspectj-weaver -->
+        <dependency>
+            <groupId>aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>${aspectj.ver}</version>
+        </dependency>
+
+        <!-- MySQL -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.6</version>
         </dependency>
     </dependencies>
 </project>

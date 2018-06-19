@@ -1,5 +1,6 @@
 package com.company;
 
+import com.company.aspect.StatisticsAspect;
 import com.company.entity.Client;
 import com.company.entity.Event;
 import com.company.entity.EventType;
@@ -39,6 +40,7 @@ public class App {
         Event event = (Event) context.getBean("event");
         event.setMsg("Some event from user " + app.client.getId());
         app.logEvent(EventType.ERROR, event);
+        app.logEvent(EventType.INFO, event);
         context.close();
     }
 }
