@@ -1,4 +1,5 @@
 /spring_training.iml
 /log.txt
 /.idea/
-target\
+/aop-training/target/
+/spring-core-training/target/
