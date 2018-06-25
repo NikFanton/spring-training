@@ -1,4 +1,4 @@
-package ua.training.statik.pointcut.example;
+package ua.training.statik.pointcut.example.pointcut;
 
 import org.springframework.aop.ClassFilter;
 import org.springframework.aop.support.StaticMethodMatcherPointcut;

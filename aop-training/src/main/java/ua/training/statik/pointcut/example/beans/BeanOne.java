@@ -1,4 +1,4 @@
-package ua.training.pointcut.example.beans;
+package ua.training.statik.pointcut.example.beans;
 
 public class BeanOne {
     public void foo() {

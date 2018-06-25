@@ -1,4 +1,4 @@
-package ua.training.pointcut.example.advice;
+package ua.training.statik.pointcut.example.advice;
 
 import org.aopalliance.intercept.MethodInterceptor;
 import org.aopalliance.intercept.MethodInvocation;
